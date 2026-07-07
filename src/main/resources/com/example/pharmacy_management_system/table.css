@@ -1,0 +1,157 @@
+/*!* ===================== TableView ===================== *!*/
+/*.table-view {*/
+/*    -fx-background-color: #2C2C2C; !* Dark background *!*/
+/*    -fx-background-radius: 10;*/
+/*    -fx-border-color: #000000B3;*/
+/*    -fx-border-width: 1;*/
+/*    -fx-border-radius: 10;*/
+/*    -fx-padding: 5;*/
+/*}*/
+
+/*!* Column headers *!*/
+/*.table-view .column-header-background {*/
+/*    -fx-background-color: #3E3E3E; !* Slightly lighter than table *!*/
+/*    -fx-background-radius: 10 10 0 0;*/
+/*}*/
+
+/*.table-view .column-header,*/
+/*.table-view .filler {*/
+/*    -fx-border-color: transparent transparent #C9A227 transparent;*/
+/*    -fx-border-width: 0 0 1 0;*/
+/*}*/
+
+/*.table-view .column-header .label {*/
+/*    -fx-text-fill: #F8F8F8; !* White header text *!*/
+/*    -fx-background-color: #1F1F1F;*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-font-size: 13px;*/
+/*}*/
+/*.table-view.table-cell{*/
+/*    -fx-alignment:  center;*/
+/*}*/
+
+/*!* Table rows *!*/
+/*.table-row-cell {*/
+/*    -fx-background-color: #2C2C2C;*/
+/*    -fx-text-fill: #F8F8F8;*/
+/*}*/
+
+/*.table-row-cell:odd {*/
+/*    -fx-background-color: #333333; !* Alternate row color *!*/
+/*}*/
+
+/*.table-row-cell:selected {*/
+/*    -fx-background-color: #C9A227; !* Gold selection *!*/
+/*    -fx-text-fill: #1F1F1F; !* Dark text on selection *!*/
+/*}*/
+
+/*!* Table cells *!*/
+/*.table-cell {*/
+/*    -fx-text-fill: #F8F8F8;*/
+/*    -fx-alignment: CENTER_LEFT;*/
+/*    -fx-padding: 6;*/
+/*    -fx-font-size: 12px;*/
+/*}*/
+
+/*!* Scrollbar (optional premium touch) *!*/
+/*.scroll-bar:vertical, .scroll-bar:horizontal {*/
+/*    -fx-background-color: #2C2C2C;*/
+/*}*/
+
+/*.scroll-bar .thumb {*/
+/*    -fx-background-color: #C9A227;*/
+/*    -fx-background-radius: 5;*/
+/*}*/
+
+/*.scroll-bar .thumb:hover {*/
+/*    -fx-background-color: #D4AF37;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== TableView ===================== */
+.table-view {
+    -fx-background-color: #fdfdfd; /* Light background */
+    -fx-background-radius: 10;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-padding: 5;
+}
+
+/* Column headers */
+.table-view .column-header-background {
+    -fx-background-color: #b3e5fc; /* Light blue header */
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-border-color: transparent transparent #29b6f6 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #212121; /* Dark text */
+    -fx-background-color: #81d4fa; /* Soft blue */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.table-view.table-cell {
+    -fx-alignment: center;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #212121;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f0f4c3; /* Light pastel for alternate rows */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ffcc80; /* Subtle orange selection */
+    -fx-text-fill: #212121;
+}
+
+/* Table cells */
+.table-cell {
+    -fx-text-fill: #212121;
+    -fx-alignment: CENTER;
+    -fx-padding: 6;
+    -fx-font-size: 12px;
+}
+
+/* Scrollbar */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: #e0f7fa;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #29b6f6;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #0288d1;
+}

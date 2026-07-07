@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="900.0" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@styleForAll.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.controllers.MedicineController">
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: linear-gradient(to bottom, #01579b, #0288d1);">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="260.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView fill="white" glyphName="USER_MD" size="90" />
+                  <Label text="MediCare" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Pharmacy Admin" textFill="#e1f5fe">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" style="-fx-background-color: rgba(255,255,255,0.3);" />
+                  <Button fx:id="dashboardButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="45.0" prefWidth="220.0" styleClass="sidebar-button" text="Dashboard">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="20" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="medicineButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#medicine" prefHeight="45.0" prefWidth="220.0" styleClass="active-button, sidebar-button" text="Medicine">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MEDKIT" size="20" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="supplierButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#supplier" prefHeight="45.0" prefWidth="220.0" styleClass="sidebar-button" text="Supplier">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="20" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="salesButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#sales" prefHeight="45.0" prefWidth="220.0" styleClass="sidebar-button" text="Sales">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="20" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="salesHistoryButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#salesHistory" prefHeight="45.0" prefWidth="220.0" styleClass="sidebar-button" text="Sales History">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="signOutButton" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#signOut" prefHeight="45.0" prefWidth="220.0" text="Sign Out">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20" />
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="720.0" prefWidth="1020.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="720.0" prefWidth="1020.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView fill="#01579b" glyphName="MEDKIT" size="32" />
+                        <Label styleClass="form-section-title" text="Medicine Inventory">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+
+                  <AnchorPane prefHeight="55.0" prefWidth="990.0" styleClass="outer-pane-shadow">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" prefHeight="35.0" prefWidth="960.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <FontAwesomeIconView fill="#78909c" glyphName="SEARCH" size="18" />
+                              <TextField fx:id="searchField" prefHeight="35.0" prefWidth="400.0" promptText="Live search by name, ID or company..." styleClass="search-field">
+                                 <styleClass>
+                                    <String fx:value="search-field" />
+                                 </styleClass>
+                              </TextField>
+                              <ComboBox fx:id="categoryFilterBox" prefHeight="35.0" prefWidth="150.0" promptText="Quick category" styleClass="form-field" />
+                              <Button mnemonicParsing="false" onAction="#filterByCategory" prefHeight="35.0" prefWidth="70.0" text="Apply" />
+                              <Button mnemonicParsing="false" onAction="#showAdvancedFilterDialog" prefHeight="35.0" prefWidth="90.0" styleClass="action-button-update" text="Filters">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="white" glyphName="FILTER" size="14" />
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#showAddDialog" prefHeight="35.0" prefWidth="100.0" styleClass="action-button-add" text="Add New">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="white" glyphName="PLUS" size="14" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+
+                  <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" styleClass="pane-shadow">
+                     <content>
+                        <FlowPane fx:id="cardsContainer" hgap="20.0" vgap="20.0" prefWidth="980.0" style="-fx-background-color: #f5f5f5; -fx-padding: 20;">
+                           <!-- Cards added dynamically -->
+                        </FlowPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
