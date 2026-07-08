@@ -1,10 +1,8 @@
 # Pharmacy Management System
 
-Run this SQL in MySQL/MariaDB before starting the app.
 
-Default login: `admin` / `admin123` (security answer: `blue`)
+sql
 
-```sql
 CREATE DATABASE IF NOT EXISTS pharmacy_management_system;
 
 USE pharmacy_management_system;
@@ -80,12 +78,6 @@ INSERT INTO sales (medicine_id, quantity, unit_price, total_price, sold_by, sale
     (1, 10, 5.00, 50.00, 'admin', NOW()),
     (3, 5, 35.00, 175.00, 'admin', NOW()),
     (2, 2, 3.50, 7.00, 'admin', DATE_SUB(NOW(), INTERVAL 1 DAY));
-```
 
-Run the SQL above in any MySQL/MariaDB client (e.g., `mysql -u root -p`, phpMyAdmin, or HeidiSQL).
 
-Then run the app:
 
-```bash
-./mvnw javafx:run
-```
